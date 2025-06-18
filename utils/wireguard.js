@@ -10,7 +10,7 @@ function generateKeys() {
   return { privateKey, publicKey, presharedKey };
 }
 
-function buildWGConfig({ privateKey, presharedKey }) {
+function buildWGConfig({ privateKey, presharedKey, allowedIPs }) {
   return `
 [Interface]
 PrivateKey = ${privateKey}
@@ -20,8 +20,8 @@ DNS         = 1.1.1.1
 [Peer]
 PublicKey    = MEwjW+VVkiI5WPB/O8GpeT4Iao9q2KRpND7DZsxAJQ0=
 PresharedKey = ${presharedKey}
-Endpoint     = 13.201.21.86:51820      
-AllowedIPs   = 0.0.0.0/0
+Endpoint     = 13.201.21.86:51820
+AllowedIPs   = ${allowedIPs}
 PersistentKeepalive = 25
 `;
 }
