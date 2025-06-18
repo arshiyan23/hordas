@@ -42,4 +42,4 @@ app.post('/api/config/generate', async (req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => console.log(`Hordas backend running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Boznav backend running on port ${PORT}`));
